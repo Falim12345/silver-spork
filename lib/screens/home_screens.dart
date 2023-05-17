@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:two/widgets/main_bottom_bar.dart';
 
 class HomeScreens extends StatefulWidget {
   const HomeScreens({super.key});
@@ -11,6 +10,6 @@ class HomeScreens extends StatefulWidget {
 class _HomeScreensState extends State<HomeScreens> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
   }
 }
