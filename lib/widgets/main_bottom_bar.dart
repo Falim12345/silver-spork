@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../screens/home_screens.dart';
+import '../screens/second_screen.dart';
+import '../screens/settings_screen.dart';
+
 class MainBottomBar extends StatefulWidget {
   const MainBottomBar({super.key});
 
@@ -8,6 +12,12 @@ class MainBottomBar extends StatefulWidget {
 }
 
 class _MainBottomBarState extends State<MainBottomBar> {
+  final List<Widget> _screens = const [
+    HomeScreen(),
+    SecondScreen(),
+    SettingsScreen(),
+  ];
+
   int _selectedIndex = 0;
   // static const TextStyle optionsStyle =
   //     TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -22,7 +32,7 @@ class _MainBottomBarState extends State<MainBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:two/screens/home_screens.dart';
+import 'package:two/widgets/main_bottom_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: "Pet",
-      home: HomeScreens(),
+      home: (MainBottomBar()),
     );
   }
 }
